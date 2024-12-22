@@ -6,7 +6,7 @@ import { BackgroundEllipsis } from '@/components/shared/ui/BackgroundEllipsis/Ba
 const poppins = Poppins({
 	variable: '--poppins',
 	subsets: ['latin'],
-	weight: ['200', '300'],
+	weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
 })
 
 const josefinSans = Josefin_Sans({

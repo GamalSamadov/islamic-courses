@@ -1,0 +1,11 @@
+.title_container {
+	@apply flex flex-col items-center gap-2;
+}
+
+.title {
+	@apply text-[3rem] font-bold;
+}
+
+.hr {
+	@apply w-[10rem] h-[2.5px] bg-sky_blue-light border-none;
+}

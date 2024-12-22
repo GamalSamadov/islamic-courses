@@ -1,8 +1,8 @@
 .ellipsis_one,
 .ellipsis_two {
-	@apply absolute w-[600px] h-[600px];
+	@apply absolute w-[60vw] h-[60vw] md:w-[35vw] md:h-[35vw] blur-[50px] md:blur-[90px];
 	z-index: -2;
-	filter: blur(140px);
+	// filter: blur(90px);
 }
 
 .ellipsis_one {
@@ -11,7 +11,7 @@
 }
 
 .ellipsis_two {
-	@apply right-[10%] bottom-[20%];
+	@apply right-[10%] bottom-[30%] md:bottom-[20%];
 
-	transform: translateY(25%) translateX(30%);
+	transform: translateY(20%) translateX(30%);
 }
