@@ -1,0 +1,17 @@
+.ellipsis_one,
+.ellipsis_two {
+	@apply absolute w-[600px] h-[600px];
+	z-index: -2;
+	filter: blur(140px);
+}
+
+.ellipsis_one {
+	@apply left-[5rem] top-0;
+	transform: translateY(-35%) translateX(-50%);
+}
+
+.ellipsis_two {
+	@apply right-[10%] bottom-[20%];
+
+	transform: translateY(25%) translateX(30%);
+}

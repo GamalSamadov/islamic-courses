@@ -9,6 +9,7 @@
 	--blue-light: #112095;
 	--sky-blue: #0dc7d2;
 	--sky-blue-light: #65d6fc;
+	--sky-blue-gradient: #65d6fc27;
 	--purple: #5e17eb;
 }
 
@@ -20,12 +21,33 @@
 		--blue-light: #112095;
 		--sky-blue: #0dc7d2;
 		--sky-blue-light: #65d6fc;
+		--sky-blue-gradient: #65d6fc27;
 		--purple: #5e17eb;
 	}
 }
 
+// @layer utilities {
+// }
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
 body {
-	color: white;
-	background: black;
+	color: var(--white);
+	background-color: var(--blue);
 	font-family: var(--poppins) sans-serif;
+
+	height: 100vh;
+	background: rgb(2, 0, 36);
+	background: linear-gradient(
+		330deg,
+		var(--blue) 0%,
+		var(--blue) 20%,
+		var(--blue-light) 100%
+	);
+
+	overflow: hidden;
 }
