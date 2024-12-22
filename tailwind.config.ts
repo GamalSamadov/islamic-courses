@@ -9,8 +9,17 @@ export default {
 	theme: {
 		extend: {
 			colors: {
-				background: 'var(--background)',
-				foreground: 'var(--foreground)',
+				blue: {
+					DEFAULT: 'var(--blue)',
+					light: 'var(--blue-light)',
+				},
+				sky_blue: {
+					DEFAULT: 'var(--sky-blue)',
+					light: 'var(--sky-blue-light)',
+				},
+				purple: 'var(--purple)',
+				white: 'var(--white)',
+				gray: 'var(--gray)',
 			},
 			fontFamily: {
 				poppins: ['var(--poppins)', 'sans-serif'],
