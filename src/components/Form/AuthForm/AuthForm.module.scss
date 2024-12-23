@@ -1,4 +1,8 @@
 .container {
+	@apply w-full flex flex-col justify-center items-center gap-5;
+}
+
+.media {
 	@apply flex flex-col justify-center items-center gap-5;
 }
 
@@ -7,12 +11,12 @@
 
 	&::before {
 		content: '';
-		@apply absolute right-[150%] top-[35%] w-[4rem] h-[2px] bg-gray border-none;
+		@apply absolute right-[150%] top-[40%] w-[4rem] h-[2px] bg-gray border-none;
 	}
 
 	&::after {
 		content: '';
-		@apply absolute left-[150%] top-[35%] w-[4rem] h-[2px] bg-gray border-none;
+		@apply absolute left-[150%] top-[40%] w-[4rem] h-[2px] bg-gray border-none;
 	}
 }
 
@@ -44,7 +48,7 @@
 	}
 
 	&:focus {
-		@apply outline-none;
+		@apply outline-none border-sky_blue-light transition duration-300 ease-in-out;
 	}
 }
 

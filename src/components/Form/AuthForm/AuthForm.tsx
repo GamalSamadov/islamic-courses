@@ -184,11 +184,12 @@ export const AuthForm = ({ isLogin }: Props) => {
 				<button type='submit' className='btn_primary_full' disabled={isLoading}>
 					{isLoading ? 'Loading...' : isLogin ? 'Sign In' : 'Sign Up'}
 				</button>
+
+				<div className={styles.media}>
+					<span className={styles.or}>or</span>
+					<GoogleButton isLoading={isLoading} />
+				</div>
 			</form>
-
-			<span className={styles.or}>or</span>
-
-			<GoogleButton isLoading={isLoading} />
 		</div>
 	)
 }
