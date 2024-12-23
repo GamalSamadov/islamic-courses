@@ -3,7 +3,7 @@ import React from 'react'
 
 const Home = () => {
 	return (
-		<div className='h-screen flex justify-center items-center'>
+		<div className='flex h-screen justify-center items-center'>
 			<FormTitle title='Sign Up' />
 		</div>
 	)

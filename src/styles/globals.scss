@@ -29,25 +29,49 @@
 // @layer utilities {
 // }
 
-* {
+*,
+*::before,
+*::after {
 	margin: 0;
 	padding: 0;
+}
+
+html,
+body {
+	width: 100%;
+	height: 100%;
+	overflow-x: hidden; /* Prevent horizontal scrolling */
+	overflow-y: hidden; /* Prevent vertical scrolling */
 	box-sizing: border-box;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+	min-width: 100%;
+	min-height: 100%;
 }
 
 body {
 	color: var(--white);
 	background-color: var(--blue);
 	font-family: var(--poppins) sans-serif;
-
-	height: 100vh;
 	background: rgb(2, 0, 36);
+}
+
+body::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -10;
 	background: linear-gradient(
 		330deg,
 		var(--blue) 0%,
 		var(--blue) 20%,
 		var(--blue-light) 100%
 	);
-
-	overflow: hidden;
 }

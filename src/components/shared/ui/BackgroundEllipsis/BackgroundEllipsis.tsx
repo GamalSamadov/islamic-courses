@@ -113,7 +113,7 @@ export const BackgroundEllipsis = ({ children }: Props) => {
 				</defs>
 			</svg>
 
-			<div style={{ zIndex: 2 }}>{children}</div>
+			{children}
 		</>
 	)
 }
