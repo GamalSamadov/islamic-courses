@@ -3,9 +3,14 @@ import React from 'react'
 
 const Home = () => {
 	return (
-		<div className='flex h-screen justify-center items-center'>
-			<FormTitle title='Sign Up' />
-		</div>
+		<>
+			<div className='flex h-screen justify-center items-center'>
+				<FormTitle title='Sign Up' />
+			</div>
+			<div className='flex h-screen justify-center items-center'>
+				<FormTitle title='Sign Up' />
+			</div>
+		</>
 	)
 }
 

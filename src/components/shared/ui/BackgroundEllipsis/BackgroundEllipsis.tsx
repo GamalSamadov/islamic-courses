@@ -1,10 +1,6 @@
 import styles from './BackgroundEllipsis.module.scss'
 
-interface Props {
-	children: React.ReactNode
-}
-
-export const BackgroundEllipsis = ({ children }: Props) => {
+export const BackgroundEllipsis = () => {
 	return (
 		<>
 			<svg
@@ -112,8 +108,6 @@ export const BackgroundEllipsis = ({ children }: Props) => {
 					</linearGradient>
 				</defs>
 			</svg>
-
-			{children}
 		</>
 	)
 }

@@ -1,6 +1,6 @@
 .ellipsis_one,
 .ellipsis_two {
-	@apply absolute w-[60vw] h-[60vw] md:w-[35vw] md:h-[35vw] blur-[50px] md:blur-[90px];
+	@apply fixed w-[60vw] h-[60vw] md:w-[35vw] md:h-[35vw] blur-[50px] md:blur-[90px];
 	z-index: -9;
 }
 

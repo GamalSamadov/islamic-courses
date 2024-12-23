@@ -31,7 +31,8 @@ export default function RootLayout({
 			<body
 				className={`${poppins.variable} ${josefinSans.variable} antialiased`}
 			>
-				<BackgroundEllipsis>{children}</BackgroundEllipsis>
+				<BackgroundEllipsis />
+				<main>{children}</main>
 			</body>
 		</html>
 	)
