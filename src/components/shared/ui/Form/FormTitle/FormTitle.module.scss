@@ -1,11 +1,11 @@
 .title_container {
-	@apply flex flex-col items-center gap-2;
+	@apply flex flex-col items-center gap-1 mb-6;
 }
 
 .title {
-	@apply text-[3rem] font-bold;
+	@apply text-[3rem] font-semibold;
 }
 
 .hr {
-	@apply w-[10rem] h-[2.5px] bg-sky_blue-light border-none;
+	@apply w-[8rem] h-[2.5px] bg-sky_blue-light border-none;
 }

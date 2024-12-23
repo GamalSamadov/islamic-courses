@@ -3,31 +3,49 @@
 @tailwind utilities;
 
 :root {
-	--white: #ffffff;
+	--white: #ffffffe7;
 	--gray: #ffffff5c;
+	--gray-blur: #ffffff11;
 	--blue: #09245a;
 	--blue-light: #112095;
 	--sky-blue: #0dc7d2;
 	--sky-blue-light: #65d6fc;
+	--sky-blue-light-border: #65d6fc67;
 	--sky-blue-gradient: #65d6fc27;
 	--purple: #5e17eb;
 }
 
-@media (prefers-color-scheme: dark) {
-	:root {
-		--white: #ffffff;
-		--gray: #ffffff5c;
-		--blue: #09245a;
-		--blue-light: #112095;
-		--sky-blue: #0dc7d2;
-		--sky-blue-light: #65d6fc;
-		--sky-blue-gradient: #65d6fc27;
-		--purple: #5e17eb;
+@layer utilities {
+	.btn_primary_full {
+		@apply w-full px-6 uppercase text-[1.4rem] py-3 font-josefin_sans font-semibold text-white rounded-xl bg-sky_blue-light border border-sky_blue-light transition duration-300 ease-in-out hover:bg-sky_blue hover:text-white hover:border-sky_blue;
+
+		box-shadow: 0 0 12px 10px var(--sky-blue-gradient);
+
+		&:disabled {
+			@apply opacity-75 cursor-not-allowed;
+		}
+
+		&:hover {
+			@apply transform scale-105;
+
+			box-shadow: 0 0 20px 15px var(--sky-blue-gradient);
+		}
+	}
+
+	.google_button {
+		@apply w-full bg-gray-blur px-6 py-4 text-[1.2rem] text-white rounded-xl  transition duration-300 ease-in-out flex justify-center items-center gap-3;
+
+		&:disabled {
+			@apply opacity-75 cursor-not-allowed;
+		}
+
+		&:hover {
+			@apply transform scale-105 bg-gray;
+
+			box-shadow: 0 0 12px 10px var(--gray-blur);
+		}
 	}
 }
-
-// @layer utilities {
-// }
 
 *,
 *::before,
@@ -45,6 +63,10 @@ body {
 	color: var(--white);
 	background: var(--blue);
 	font-family: var(--poppins) sans-serif;
+}
+
+main {
+	@apply px-5 md:px-12;
 }
 
 main::before {

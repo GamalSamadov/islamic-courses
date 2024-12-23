@@ -16,10 +16,14 @@ export default {
 				sky_blue: {
 					DEFAULT: 'var(--sky-blue)',
 					light: 'var(--sky-blue-light)',
+					light_border: 'var(--sky-blue-light-border)',
 				},
 				purple: 'var(--purple)',
 				white: 'var(--white)',
-				gray: 'var(--gray)',
+				gray: {
+					DEFAULT: 'var(--gray)',
+					blur: 'var(--gray-blur)',
+				},
 			},
 			fontFamily: {
 				poppins: ['var(--poppins)', 'sans-serif'],
