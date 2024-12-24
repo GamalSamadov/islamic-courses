@@ -5,6 +5,7 @@
 :root {
 	--white: #ffffffe7;
 	--gray: #ffffff5c;
+	--gray-hover: #ffffff24;
 	--gray-blur: #ffffff11;
 	--blue: #09245a;
 	--blue-light: #112095;
@@ -40,7 +41,7 @@
 		}
 
 		&:hover {
-			@apply transform scale-105 bg-gray;
+			@apply transform scale-105 bg-gray-hover;
 
 			box-shadow: 0 0 12px 10px var(--gray-blur);
 		}

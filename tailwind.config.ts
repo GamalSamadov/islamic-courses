@@ -23,6 +23,7 @@ export default {
 				gray: {
 					DEFAULT: 'var(--gray)',
 					blur: 'var(--gray-blur)',
+					hover: 'var(--gray-hover)',
 				},
 			},
 			fontFamily: {
