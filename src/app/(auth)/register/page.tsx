@@ -1,10 +1,14 @@
 import { AuthForm } from '@/components/Form/AuthForm/AuthForm'
+import { MosqueBackground } from '@/components/shared/ui/MosqueBackground/MosqueBackground'
+import styles from './Register.module.scss'
 
 const SignUp = () => {
 	return (
-		<div className='flex h-screen justify-center items-center'>
-			<AuthForm />
-		</div>
+		<MosqueBackground>
+			<div className={styles.register}>
+				<AuthForm />
+			</div>
+		</MosqueBackground>
 	)
 }
 

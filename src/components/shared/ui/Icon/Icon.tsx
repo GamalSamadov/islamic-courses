@@ -28,8 +28,8 @@ export const Icon = ({
 						? '/assets/icons/eye-opened.svg'
 						: '/assets/icons/eye-closed.svg'
 				}
-				width={30}
-				height={30}
+				width={width}
+				height={height}
 				alt='password'
 				draggable={false}
 			/>

@@ -1,12 +1,14 @@
 import { AuthForm } from '@/components/Form/AuthForm/AuthForm'
-import clsx from 'clsx'
 import styles from './Login.module.scss'
+import { MosqueBackground } from '@/components/shared/ui/MosqueBackground/MosqueBackground'
 
 const SignIn = () => {
 	return (
-		<div className={clsx(styles['login'])}>
-			<AuthForm isLogin />
-		</div>
+		<MosqueBackground>
+			<div className={styles.login}>
+				<AuthForm isLogin />
+			</div>
+		</MosqueBackground>
 	)
 }
 

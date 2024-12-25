@@ -5,9 +5,9 @@ import { useAuthForm } from '@/hooks/useAuthForm'
 import { useState } from 'react'
 import { AuthToggle } from '@/components/shared/ui/Form/AuthToggle/AuthToggle'
 import styles from './AuthForm.module.scss'
-import { GoogleButton } from '@/components/shared/ui/Form/GoogleButton/GoogleButton'
-import { AnimateDownOnClickRight } from '@/components/shared/ui/AnimateDownOnClick/AnimateDownOnClick'
 import { Icon } from '@/components/shared/ui/Icon/Icon'
+import { MediaButtons } from '../MediaButtons/MediaButtons'
+import { SubmitButton } from '@/components/shared/ui/Form/SubmitButton/SubmitButton'
 
 interface Props {
 	isLogin?: boolean | undefined
@@ -42,8 +42,8 @@ export const AuthForm = ({ isLogin }: Props) => {
 
 							<Icon
 								src='/assets/icons/email.svg'
-								width={30}
-								height={30}
+								width={25}
+								height={25}
 								alt='email'
 							/>
 						</div>
@@ -95,8 +95,8 @@ export const AuthForm = ({ isLogin }: Props) => {
 							/>
 							<Icon
 								src='/assets/icons/email.svg'
-								width={30}
-								height={30}
+								width={25}
+								height={25}
 								alt='email'
 							/>
 						</div>
@@ -124,8 +124,8 @@ export const AuthForm = ({ isLogin }: Props) => {
 								<Icon
 									isEye
 									isVisibleEye={isVisible.registerPassword}
-									width={30}
-									height={30}
+									width={25}
+									height={25}
 								/>
 							</div>
 						</div>
@@ -154,8 +154,8 @@ export const AuthForm = ({ isLogin }: Props) => {
 								<Icon
 									isEye
 									isVisibleEye={isVisible.registerConfirmPassword}
-									width={30}
-									height={30}
+									width={25}
+									height={25}
 								/>
 							</div>
 						</div>
@@ -164,20 +164,9 @@ export const AuthForm = ({ isLogin }: Props) => {
 					</>
 				)}
 
-				<AnimateDownOnClickRight>
-					<button
-						type='submit'
-						className='btn_primary_full'
-						disabled={isLoading}
-					>
-						{isLoading ? 'Loading...' : isLogin ? 'Sign In' : 'Sign Up'}
-					</button>
-				</AnimateDownOnClickRight>
+				<SubmitButton isAuth isLoading={isLoading} isLogin={isLogin} />
 
-				<div className={styles.media}>
-					<span className={styles.or}>or</span>
-					<GoogleButton isLoading={isLoading} />
-				</div>
+				<MediaButtons isLoading={isLoading} />
 			</form>
 		</div>
 	)

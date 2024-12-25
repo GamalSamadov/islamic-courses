@@ -1,27 +1,9 @@
 .container {
-	@apply w-full flex flex-col justify-center items-center gap-5;
-}
-
-.media {
-	@apply flex flex-col justify-center items-center gap-5;
-}
-
-.or {
-	@apply text-gray font-josefin_sans uppercase relative;
-
-	&::before {
-		content: '';
-		@apply absolute right-[150%] top-[40%] w-[4rem] h-[2px] bg-gray border-none;
-	}
-
-	&::after {
-		content: '';
-		@apply absolute left-[150%] top-[40%] w-[4rem] h-[2px] bg-gray border-none;
-	}
+	@apply w-full h-screen flex flex-col justify-center items-center gap-3 md:gap-4;
 }
 
 .form {
-	@apply w-full md:w-[60vw] lg:w-[30vw] flex flex-col relative gap-5;
+	@apply w-full md:w-[60vw] lg:w-[30vw] flex flex-col relative gap-3 md:gap-4;
 }
 
 .input_container {
@@ -29,12 +11,12 @@
 }
 
 .label {
-	@apply absolute left-5 top-[0.8rem] text-gray text-[0.9rem];
+	@apply absolute left-4 top-[0.6rem] text-gray text-[0.7rem];
 	z-index: 1;
 }
 
 .input {
-	@apply border-[0.7px] border-sky_blue-light_border rounded-xl px-5 pb-3 pt-9 w-full bg-gray-blur;
+	@apply border-[0.7px] border-sky_blue-light_border rounded-xl px-4 pb-3 pt-7 w-full bg-gray-blur;
 
 	-webkit-backdrop-filter: blur(30px);
 	backdrop-filter: blur(30px);
