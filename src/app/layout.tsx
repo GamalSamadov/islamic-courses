@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Poppins, Josefin_Sans } from 'next/font/google'
 import '@/styles/globals.scss'
 import { BackgroundEllipsis } from '@/components/shared/ui/BackgroundEllipsis/BackgroundEllipsis'
+import { Providers } from './Providers'
 
 const poppins = Poppins({
 	variable: '--poppins',
@@ -32,7 +33,9 @@ export default function RootLayout({
 				className={`${poppins.variable} ${josefinSans.variable} antialiased`}
 			>
 				<BackgroundEllipsis />
-				<main>{children}</main>
+				<Providers>
+					<main>{children}</main>
+				</Providers>
 			</body>
 		</html>
 	)

@@ -1,30 +1,50 @@
-import { PUBLIC_PAGES } from '@/config/pages/public.config'
-import { IFormData } from '@/types/form.type'
+import { useMutation } from '@tanstack/react-query'
+import axios from 'axios'
 import { useRouter } from 'next/navigation'
 import { useTransition } from 'react'
 import { SubmitHandler, useForm } from 'react-hook-form'
+import toast from 'react-hot-toast'
 
-export const useAuthForm = (isLogin: boolean | undefined) => {
+import authService from '@/services/auth/auth.service'
+import { IFormData } from '@/types/types'
+
+export function useAuthForm(isLogin: boolean | undefined) {
 	const { register, handleSubmit, reset } = useForm<IFormData>()
 
 	const router = useRouter()
 	const [isPending, startTransition] = useTransition()
 
-	const mutateLogin = (data: IFormData) => {
-		startTransition(() => {
-			reset()
-			router.push(PUBLIC_PAGES.HOME)
-			console.log(data)
-		})
-	}
+	const { mutate: mutateLogin, isPending: isLoginPending } = useMutation({
+		mutationKey: ['login'],
+		mutationFn: (data: IFormData) => authService.main('login', data),
+		onSuccess() {
+			startTransition(() => {
+				reset()
+				router.push('/')
+			})
+		},
+		onError(error) {
+			if (axios.isAxiosError(error)) {
+				toast.error(error.response?.data?.message)
+			}
+		},
+	})
 
-	const mutateRegister = (data: IFormData) => {
-		startTransition(() => {
-			reset()
-			router.push(PUBLIC_PAGES.HOME)
-			console.log(data)
-		})
-	}
+	const { mutate: mutateRegister, isPending: isRegisterPending } = useMutation({
+		mutationKey: ['register'],
+		mutationFn: (data: IFormData) => authService.main('register', data),
+		onSuccess() {
+			startTransition(() => {
+				reset()
+				router.push('/')
+			})
+		},
+		onError(error) {
+			if (axios.isAxiosError(error)) {
+				toast.error(error.response?.data?.message)
+			}
+		},
+	})
 
 	const onSubmit: SubmitHandler<IFormData> = data => {
 		if (isLogin) {
@@ -34,7 +54,12 @@ export const useAuthForm = (isLogin: boolean | undefined) => {
 		}
 	}
 
-	const isLoading = isPending
+	const isLoading = isPending || isLoginPending || isRegisterPending
 
-	return { register, handleSubmit, onSubmit, isLoading }
+	return {
+		register,
+		handleSubmit,
+		onSubmit,
+		isLoading,
+	}
 }

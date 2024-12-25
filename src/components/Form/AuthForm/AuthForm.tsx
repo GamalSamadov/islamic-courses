@@ -130,7 +130,7 @@ export const AuthForm = ({ isLogin }: Props) => {
 							</div>
 						</div>
 
-						<div className={styles['input_container']}>
+						{/* <div className={styles['input_container']}>
 							<span className={styles['label']}>Confirm Password</span>
 							<input
 								{...register('confirmPassword', {
@@ -158,7 +158,7 @@ export const AuthForm = ({ isLogin }: Props) => {
 									height={25}
 								/>
 							</div>
-						</div>
+						</div> */}
 
 						<AuthToggle />
 					</>
