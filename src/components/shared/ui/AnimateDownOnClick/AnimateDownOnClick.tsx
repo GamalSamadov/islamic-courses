@@ -8,7 +8,7 @@ export const AnimateDownOnClickLeft = ({ children }: Props) => {
 	return (
 		<motion.div
 			className={styles['animate-down']}
-			whileTap={{ scale: 0.94, rotate: 0.7 }}
+			whileTap={{ scale: 0.96, rotate: 0.4 }}
 		>
 			{children}
 		</motion.div>
@@ -19,7 +19,7 @@ export const AnimateDownOnClickRight = ({ children }: Props) => {
 	return (
 		<motion.div
 			className={styles['animate-down']}
-			whileTap={{ scale: 0.94, rotate: -0.7 }}
+			whileTap={{ scale: 0.96, rotate: -0.4 }}
 		>
 			{children}
 		</motion.div>
